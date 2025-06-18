@@ -1,0 +1,122 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7; /* Warna latar belakang yang menenangkan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+    margin: 0;
+    color: #333;
+    overflow: hidden; /* Mencegah scrollbar jika ada elemen keluar */
+}
+
+#game-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih lembut */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar/tinggi */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+#question {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="number"] {
+    padding: 12px 15px;
+    font-size: 1.3em;
+    border: 2px solid #aec6cf; /* Warna border yang cocok */
+    border-radius: 8px;
+    width: calc(100% - 30px); /* Mengisi lebar kontainer */
+    max-width: 200px; /* Batasi lebar maksimum */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #6aabcb; /* Warna border saat fokus */
+    box-shadow: 0 0 8px rgba(106, 171, 203, 0.5); /* Efek bayangan saat fokus */
+    outline: none; /* Hilangkan outline default browser */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.3em;
+    background-color: #28a745; /* Warna hijau yang menarik */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #218838; /* Sedikit lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek angkat sedikit */
+}
+
+button:active {
+    background-color: #1e7e34;
+    transform: translateY(0); /* Kembali ke posisi semula saat diklik */
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 1.5em; /* Memastikan feedback tidak menggeser layout */
+}
+
+#feedback.correct {
+    color: #28a745; /* Hijau */
+}
+
+#feedback.incorrect {
+    color: #dc3545; /* Merah */
+}
+
+#feedback.warning {
+    color: #ffc107; /* Kuning/Orange */
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    #game-container {
+        padding: 25px;
+        margin: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #question {
+        font-size: 1.8em;
+    }
+    input[type="number"], button {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
